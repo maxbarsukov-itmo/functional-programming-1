@@ -26,8 +26,13 @@ defmodule LargestPrimeFactor.AsyncTaskSpec do
 
     describe "parallel largest_prime_factor/1 with Task.async_stream" do
       it "returns the largest prime factor in parallel for large number" do
-        result = Task.async_stream([600_851_475_143, 13_195], LargestPrimeFactor.AsyncTask, :largest_prime_factor, [], timeout: 10_000)
-        |> Enum.map(fn {:ok, value} -> value end)
+        result = Task.async_stream(
+          [600_851_475_143, 13_195],
+          LargestPrimeFactor.AsyncTask,
+          :largest_prime_factor,
+          [],
+          timeout: 10_000
+        ) |> Enum.map(fn {:ok, value} -> value end)
 
         expect result |> to(eq([6857, 29]))
       end

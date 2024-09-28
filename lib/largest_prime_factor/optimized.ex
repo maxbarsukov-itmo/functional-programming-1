@@ -1,7 +1,7 @@
 defmodule LargestPrimeFactor.Optimized do
   @moduledoc "Optimized realization"
 
-  def wheel235(),
+  def wheel235,
     do:
       Stream.concat(
         [2, 3, 5],
