@@ -1,5 +1,7 @@
 {
   "skip_files": [
-    "spec/support"
+    "spec/support",
+    "lib/largest_prime_factor/imperative.c",
+    "lib/number_spiral_diagonals/imperative.c"
   ]
 }
