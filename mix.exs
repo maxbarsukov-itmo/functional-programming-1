@@ -12,7 +12,6 @@ defmodule FpLab1.MixProject do
       app: :fp_lab1,
       elixir: "~> 1.17",
       elixirc_paths: elixirc_paths(Mix.env()),
-
       preferred_cli_env: [
         # Testing
         espec: :test,
@@ -25,9 +24,7 @@ defmodule FpLab1.MixProject do
         "coveralls.cobertura": :test
       ],
       test_coverage: [tool: ExCoveralls],
-
       start_permanent: Mix.env() == :prod,
-
       deps: deps(),
       aliases: aliases(),
 
@@ -39,7 +36,7 @@ defmodule FpLab1.MixProject do
       # Hex
       description: description(),
       package: package(),
-      version: @version,
+      version: @version
     ]
   end
 
@@ -64,7 +61,7 @@ defmodule FpLab1.MixProject do
       # Linting & formatting
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
-      {:ex_check, "~> 0.16.0", only: [:dev], runtime: false},
+      {:ex_check, "~> 0.16.0", only: [:dev], runtime: false}
     ]
   end
 
